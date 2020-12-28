@@ -1,0 +1,10 @@
+{
+  "data": [
+      {"title": "Exhibition","date": "2021-11-01", "time": "10:00", "location": "St. John's", "opponent": "St. John's AAA"},
+      {"title": "Exhibition","date": "2021-10-01", "time": "9:00", "location": "CBS", "opponent": "CBS Team"},
+      {"title": "Exhibition","date": "2021-10-01", "time": "2:30", "location": "Bay Roberts", "opponent": "Bay Roberts team"},
+      {"title": "Playoff","date": "2021-11-01", "time": "10:00", "location": "Bell Island", "opponent": "St. John's AAA"},
+      {"title": "Makeup","date": "2021-10-01", "time": "9:00", "location": "Bell Island", "opponent": "St. John's AAA"}
+
+  ]
+}
