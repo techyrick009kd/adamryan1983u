@@ -24,6 +24,6 @@
       "@utils/*": ["utils/*"],
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "pages/roster/Roster.jsx", "pages/schedule/Calendar.jsx", "pages/schedule/Schedule.jsx", "utils/mongodb.js", "pages/index.jsx", "pages/index.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "pages/roster/Roster.jsxpages/api/schedule/Calendar.jsx.jsxpages/api/schedule/Schedule.jsx.jsxngodbold.js", "pages/index.tsx", "pages/index.tsx"],
   "exclude": ["node_modules"]
 }

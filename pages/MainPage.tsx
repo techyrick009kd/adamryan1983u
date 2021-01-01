@@ -2,7 +2,6 @@ import Head from 'next/head'
 import { useState, useEffect } from 'react'
 import styles from '@styles/MainPage.module.scss'
 import Division from '@pages/divisions/Division'
-import { harperFetch } from '@utils/harperdb';
 
 
 //primereact components
@@ -15,29 +14,18 @@ import { NextPage } from 'next'
 interface Props {
   data?: Array<any>;
   item?: any;
+  isConnected?: boolean;
 }
 
 const MainPage: NextPage<Props> = (props) => {
 
-  useEffect(() => {
-    // setData(harperFetch(division))
-  },[])
-
   const [ division, setDivision ] = useState()
   const [ page, setPage ] = useState(false)
-  // const [data, setData] = useState([])
 
   const printer = (e: any) => {
     e.preventDefault();
     setPage(true)
   }
-
-  // MainPage.getInitialProps = async () => {
-  //   const res = await harperFetch('timbits')
-  //   // const json = await res.json()
-  //   console.log(res.json())
-  //   // return { data: res }
-  // }
 
   const handleDivisionChange = (e: any) => {
     setDivision(e.target.value)
@@ -53,7 +41,7 @@ const MainPage: NextPage<Props> = (props) => {
 ];
   return (
     <>
-    { page ? <Division division={division} /> :
+    { page ? <Division division={division} isConnected={props.isConnected}/> :
     <form>
       <div className={styles.container}>
         <Head>
@@ -69,10 +57,7 @@ const MainPage: NextPage<Props> = (props) => {
               <span className={styles.link}>BIMHA</span> Management System
             </div>
           </h2>
-            {/* <ul>
-              {[data].map(item => <li key={item.id}>{item.name}</li>)}
-            </ul> */}
-
+          
           <p className={styles.p}>
             Choose the division you want to manage:
           </p>
