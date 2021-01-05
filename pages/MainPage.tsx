@@ -1,8 +1,7 @@
 import Head from 'next/head'
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import styles from '@styles/MainPage.module.scss'
 import Division from '@pages/divisions/Division'
-
 
 //primereact components
 import { Button } from 'primereact/button';

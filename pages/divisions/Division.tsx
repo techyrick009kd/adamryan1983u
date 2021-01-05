@@ -3,7 +3,6 @@ import styles from './Division.module.scss'
 import Roster from '../roster/Roster'
 import Schedule from '../schedule/Schedule'
 import MainPage from '@pages/MainPage'
-import { connectToDatabase } from '@utils/mongodb'
 
 //primereact
 import { Button } from 'primereact/button';
