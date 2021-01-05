@@ -3,6 +3,7 @@ import styles from './Division.module.scss'
 import Roster from '../roster/Roster'
 import Schedule from '../schedule/Schedule'
 import MainPage from '@pages/MainPage'
+import { connectToDatabase } from '@utils/mongodb'
 
 //primereact
 import { Button } from 'primereact/button';
@@ -17,12 +18,12 @@ const Division = (props: any) => {
         case 2:
           return <Schedule division={props.division} />;
         case 3:
-          return <MainPage />;
+          return <MainPage isConnected={props.isConnected}/>;
         default:
           return (
             <div className={styles.container}>
               <div className={styles.title}>
-                {props.division} Division
+                {props.division} Division 
               </div>
               <div className={styles.content}>
                 <div className={styles.option}>

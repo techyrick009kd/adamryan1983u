@@ -1,8 +1,5 @@
 export const harperFetch = async (props:any) => {
   const myHeaders = new Headers();
-  // let schema = 'roster'
-  // let table = 'timbitsroster'
-
 
   const raw = JSON.stringify({
       "operation": "sql",

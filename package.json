@@ -19,6 +19,7 @@
     "@mui/material": "^5.0.1",
     "axios": "^0.21.4",
     "dotenv": "^10.0.0",
+    "firebase": "^9.1.1",
     "gapi-script": "^1.2.0",
     "harperdbjs": "^0.1.0",
     "harperive": "^2.0.1",
