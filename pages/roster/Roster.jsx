@@ -21,7 +21,7 @@ import 'primeicons/primeicons.css';
 import 'primereact/resources/themes/saga-blue/theme.css';
 import 'primereact/resources/primereact.css';
 
-const Roster = (props:any) => {
+const Roster = (props) => {
 
   let emptyPlayer = {
     id: '',
@@ -53,7 +53,7 @@ const Roster = (props:any) => {
     return <Dropdown value={e.value} options={e.options} onChange={(event) => e.onChange(event.originalEvent, event.value)} style={{ lineHeight: 1 }} />;
   }
 
-  const yearNavigatorTemplate = (e:any) => {
+  const yearNavigatorTemplate = (e) => {
     return <Dropdown value={e.value} options={e.options} onChange={(event) => e.onChange(event.originalEvent, event.value)} className="p-ml-2" style={{ lineHeight: 1 }} />;
   }
 
@@ -83,7 +83,7 @@ const Roster = (props:any) => {
     rosterLoader();
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
-  const removePlayerRoster = async (player:String) => {
+  const removePlayerRoster = async (player) => {
     const myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
     myHeaders.append("Authorization", `${process.env.NEXT_PUBLIC_HARPER_HEADER}`);
@@ -108,7 +108,7 @@ const Roster = (props:any) => {
       .catch(error => console.log('error', error));
   }
 
-  const addPlayerRoster = async (player:typeof emptyPlayer) => {
+  const addPlayerRoster = async (player) => {
     const myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
     myHeaders.append("Authorization", `${process.env.NEXT_PUBLIC_HARPER_HEADER}`);
@@ -139,7 +139,7 @@ const Roster = (props:any) => {
       .catch(error => console.log('error', error));
   }
 
-  const updatePlayerRoster = async (player:any) => {
+  const updatePlayerRoster = async (player) => {
     console.log(player)
     const myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
@@ -173,7 +173,7 @@ const Roster = (props:any) => {
       .catch(error => console.log('error', error));
   }
 
-  const findIndexById = (id:number) => {
+  const findIndexById = (id) => {
     let index = -1;
     for (let i = 0; i < players.length; i++) {
         if (players[i].id === id) {
@@ -232,12 +232,12 @@ const Roster = (props:any) => {
       setPlayer(emptyPlayer);
     }
   }
-  const editPlayer = (player:any) => {
+  const editPlayer = (player) => {
     setPlayer({...player});
     setUpdatePlayerDialog(true);
   }
 
-  const confirmDeletePlayer = (player:Object) => {
+  const confirmDeletePlayer = (player) => {
     setPlayer(player);
     setDeletePlayersDialog(true);
   }
@@ -277,21 +277,21 @@ const Roster = (props:any) => {
     toast.current.show({ severity: 'success', summary: 'Successful', detail: 'events Deleted', life: 3000 });
   }
 
-  const onInputChange = (e, name:String) => {
+  const onInputChange = (e, name) => {
     const val = (e.target && e.target.value) || '';
     let _player = {...player};
     _player[`${name}`] = val;
     setPlayer(_player);
   }
 
-  const onDateChange = (e, dob:String) => {
+  const onDateChange = (e, dob) => {
     const val = (e.target && e.target.value) || '';
     let _player = {...player};
     _player[`${dob}`] = val.toISOString().substring(0, 10);;
     setPlayer(_player);
   }
 
-  const onInputNumberChange = (e:number, jersey:number) => {
+  const onInputNumberChange = (e, jersey) => {
     const val = e.value || 0;
     let _player = {...player};
     _player[`${jersey}`] = val;
@@ -315,7 +315,7 @@ const Roster = (props:any) => {
     )
   }
 
-  const actionBodyTemplate = (rowData:any) => {
+  const actionBodyTemplate = (rowData) => {
     return (
         <React.Fragment>
             <Button icon="pi pi-pencil" className="p-button-rounded p-button-success p-mr-2" onClick={() => editPlayer(rowData)} />
