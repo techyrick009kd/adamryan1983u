@@ -1,4 +1,4 @@
-export const harperFetch = async (props:any) => {
+export const harperFetch = async (props) => {
   const myHeaders = new Headers();
 
   const raw = JSON.stringify({
