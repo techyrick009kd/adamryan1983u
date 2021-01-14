@@ -441,7 +441,7 @@ const Roster = (props) => {
             <Dialog visible={deletePlayersDialog} style={{ width: '450px' }} header="Confirm" modal footer={deletePlayersDialogFooter} onHide={hideDeletePlayersDialog}>
                 <div className="confirmationContent">
                     <i className="pi pi-exclamation-triangle p-mr-3" style={{ fontSize: '2rem'}} />
-                    {event && <span>Are you sure you want to delete the selected Player(s)?</span>}
+                    {player && <span>Are you sure you want to delete the selected Player(s)?</span>}
                 </div>
             </Dialog>
         </div>
