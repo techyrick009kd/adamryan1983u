@@ -138,12 +138,9 @@ const Roster = (props) => {
   }
 
   const updatePlayerRoster = async (player) => {
-    console.log(player)
     const myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
     myHeaders.append("Authorization", `${process.env.NEXT_PUBLIC_HARPER_HEADER}`);
-
-    console.log(`${player.name},${player.dob},${player.jersey},${player.status}`)
 
     var raw = JSON.stringify({
       "operation": "update",
@@ -399,7 +396,7 @@ const Roster = (props) => {
               <div className="p-formgrid p-grid">
                 <div className="p-field p-col">
                     <label htmlFor="jersey">Jersey #</label>
-                    <InputNumber id="price" value={player.jersey} onValueChange={(e) => onInputNumberChange(e, 'jersey')} integeronly/>
+                    <InputNumber id="jersey" value={player.jersey} onValueChange={(e) => onInputNumberChange(e, 'jersey')} integeronly/>
                 </div>
                 <div className="p-field p-col">
                     <label htmlFor="status">Status</label>
